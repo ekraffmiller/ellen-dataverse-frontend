@@ -34,9 +34,6 @@ export const DraftVersion: Story = {
       version: new DatasetVersion(1, 0, DatasetStatus.DRAFT)
     })
 
-    /*
-      Includes extra breaks, so you can see the DRAFT tooltip message
-       */
     return (
       <div>
         <br></br>
