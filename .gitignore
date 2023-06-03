@@ -44,5 +44,6 @@ yarn-error.log*
 #dev environment
 /dev-env/docker-dev-volumes
 /dev-env/dataverse
+/dev-env/build-storybook.log
 /dev-env/dataverse-sample-data
 /packages/design-system/.nyc_output
