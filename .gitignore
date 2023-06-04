@@ -27,11 +27,12 @@
 
 # misc
 .DS_Store
-.env
+./.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.npmrc
 
 npm-debug.log*
 yarn-debug.log*
@@ -43,5 +44,6 @@ yarn-error.log*
 #dev environment
 /dev-env/docker-dev-volumes
 /dev-env/dataverse
+/dev-env/build-storybook.log
 /dev-env/dataverse-sample-data
 /packages/design-system/.nyc_output
