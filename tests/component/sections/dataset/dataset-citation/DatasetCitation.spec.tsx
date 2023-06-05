@@ -3,6 +3,9 @@ import { DatasetMother } from '../../../dataset/domain/models/DatasetMother'
 import { DatasetStatus, DatasetVersion } from '../../../../../src/dataset/domain/models/Dataset'
 
 describe('DatasetCitation', () => {
+  /*
+  Test that dataset fields render
+   */
   it('renders the DatasetCitation fields of released Dataset', () => {
     const dataset = DatasetMother.create()
     cy.customMount(<DatasetCitation citation={dataset.citation} version={dataset.version} />)
