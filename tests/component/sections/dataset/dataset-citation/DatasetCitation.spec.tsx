@@ -3,6 +3,9 @@ import { DatasetMother } from '../../../dataset/domain/models/DatasetMother'
 import { DatasetStatus, DatasetVersion } from '../../../../../src/dataset/domain/models/Dataset'
 
 describe('DatasetCitation', () => {
+  /*
+   Test content of dataset fields
+   */
   it('renders the DatasetCitation fields of released Dataset', () => {
     const dataset = DatasetMother.create()
     cy.customMount(<DatasetCitation citation={dataset.citation} version={dataset.version} />)
@@ -18,7 +21,9 @@ describe('DatasetCitation', () => {
     cy.findByText(/RELEASED/).should('not.exist')
     cy.findByText(/V1/).should('exist')
   })
-
+  /*
+   Test that the draft tooltip is shown and has the right content
+   */
   it('shows the draft tooltip when version is draft', () => {
     const dataset = DatasetMother.create({ version: new DatasetVersion(1, 0, DatasetStatus.DRAFT) })
     cy.customMount(<DatasetCitation citation={dataset.citation} version={dataset.version} />)

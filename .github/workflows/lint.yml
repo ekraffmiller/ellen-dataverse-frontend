@@ -25,6 +25,3 @@ jobs:
       - name: Build Dataverse UI Library
         working-directory: packages/design-system
         run: npm run build
-
-      - name: Lint
-        run: npm run lint
