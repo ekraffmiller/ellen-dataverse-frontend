@@ -21,7 +21,9 @@ describe('DatasetCitation', () => {
     cy.findByText(/RELEASED/).should('not.exist')
     cy.findByText(/V1/).should('exist')
   })
-
+  /*
+   Test that the draft tooltip is shown and has the right content
+   */
   it('shows the draft tooltip when version is draft', () => {
     const dataset = DatasetMother.create({ version: new DatasetVersion(1, 0, DatasetStatus.DRAFT) })
     cy.customMount(<DatasetCitation citation={dataset.citation} version={dataset.version} />)
